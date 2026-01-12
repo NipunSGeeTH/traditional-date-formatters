@@ -1,13 +1,19 @@
 {
   "name": "traditional-date-formatters",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Traditional date formatters from cultures around the world",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
-    "test": "node examples/all-formatters.js",
+    "test": "node dist/index.js",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -23,8 +29,11 @@
     "international",
     "i18n"
   ],
-  "author": "Nipun Sanjaya",
+  "author": "Sangeeth Kariyapperuma",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/NipunSGeeTH/traditional-date-formatters.git"

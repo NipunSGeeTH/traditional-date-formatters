@@ -1,18 +1,8 @@
 {
-  "name": "@traditional-formatters/sinhala",
+  "name": "@traditional-date-formatters/sinhala",
   "version": "1.0.0",
   "description": "Traditional Sinhala date formatter (දුරුතු මස කුජදා)",
-  "main": "index.ts",
   "type": "module",
-  "keywords": ["sinhala", "date", "formatter", "sri-lanka", "traditional"],
-  "author": "Your Name",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nipunsgeeth/traditional-date-formatters.git",
-    "directory": "packages/sinhala"
-  }
+  "private": true
 }
