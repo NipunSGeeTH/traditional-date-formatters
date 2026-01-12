@@ -1,4 +1,10 @@
-module.exports = {
+export interface DateFormatter {
+  name: string;
+  locale: string;
+  format(date?: Date): string;
+}
+
+const ethiopianFormatter: DateFormatter = {
   name: 'ethiopian',
   locale: 'am-ET',
   format(date = new Date()) {
@@ -6,3 +12,5 @@ module.exports = {
     return new Date(date).toLocaleDateString('am-ET');
   },
 };
+
+export default ethiopianFormatter;

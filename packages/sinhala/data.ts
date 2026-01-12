@@ -1,4 +1,4 @@
-// data.js - All traditional Sinhala names
+// data.ts - All traditional Sinhala names
 
 // Planetary weekday names (ග්‍රහ වාර)
 export const WEEKDAY_NAMES = [
@@ -46,7 +46,7 @@ export const GREGORIAN_MONTHS = [
 // Sinhala numerals
 export const SINHALA_NUMERALS = ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯'];
 
-export function toSinhalaNumber(num) {
+export function toSinhalaNumber(num: number): string {
   return String(num)
     .split('')
     .map(digit => SINHALA_NUMERALS[parseInt(digit)])

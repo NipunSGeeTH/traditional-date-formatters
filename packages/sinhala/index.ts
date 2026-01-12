@@ -1,18 +1,18 @@
-// index.js - Main formatter
+// index.ts - Main formatter
 
 import { 
   WEEKDAY_NAMES, 
   MONTH_NAMES, 
   GREGORIAN_MONTHS,
   toSinhalaNumber 
-} from './data.js';
+} from './data.ts';
 
-function getTraditionalMonth(gregorianMonth) {
+function getTraditionalMonth(gregorianMonth: number) {
   const mapping = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   return MONTH_NAMES[mapping[gregorianMonth]];
 }
 
-export function formatSinhala(date, style = 'traditional') {
+export function formatSinhala(date: Date | string = new Date(), style: string = 'traditional'): string {
   const d = typeof date === 'string' ? new Date(date) : date;
   
   const year = d.getFullYear();
@@ -50,23 +50,3 @@ export function formatSinhala(date, style = 'traditional') {
       return `${year} ${traditionalMonth.si} මස ${String(day).padStart(2, '0')} වන ${weekdayName}`;
   }
 }
-
-export function getWeekdayName(date, lang = 'si') {
-  const d = typeof date === 'string' ? new Date(date) : date;
-  const weekday = WEEKDAY_NAMES[d.getDay()];
-  return lang === 'si' ? weekday.si : weekday.en;
-}
-
-export function getTraditionalMonthName(date, lang = 'si') {
-  const d = typeof date === 'string' ? new Date(date) : date;
-  const month = getTraditionalMonth(d.getMonth());
-  return lang === 'si' ? month.si : month.en;
-}
-
-export function getGregorianMonthName(date, lang = 'si') {
-  const d = typeof date === 'string' ? new Date(date) : date;
-  const month = GREGORIAN_MONTHS[d.getMonth()];
-  return lang === 'si' ? month.si : month.en;
-}
-
-export { WEEKDAY_NAMES, MONTH_NAMES, GREGORIAN_MONTHS, toSinhalaNumber } from './data.js';

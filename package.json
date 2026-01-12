@@ -1,14 +1,14 @@
 {
   "name": "traditional-date-formatters",
   "version": "1.0.0",
+  "type": "module",
   "description": "Traditional date formatters from cultures around the world",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Add tests later\"",
-    "example": "node examples/all-formatters.js"
+    "example": "ts-node examples/all-formatters.ts"
   },
   "keywords": [
     "date",
@@ -23,5 +23,10 @@
     "url": "https://github.com/nipunsgeeth/traditional-date-formatters.git"
   },
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
 }

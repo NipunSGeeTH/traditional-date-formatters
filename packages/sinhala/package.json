@@ -2,7 +2,7 @@
   "name": "@traditional-formatters/sinhala",
   "version": "1.0.0",
   "description": "Traditional Sinhala date formatter (දුරුතු මස කුජදා)",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "keywords": ["sinhala", "date", "formatter", "sri-lanka", "traditional"],
   "author": "Your Name",

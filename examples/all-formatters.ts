@@ -1,4 +1,4 @@
-// examples/all-formatters.js
+// examples/all-formatters.ts
 
 import { formatSinhala } from '@traditional-formatters/sinhala';
 // import { formatNepali } from '@traditional-formatters/nepali';

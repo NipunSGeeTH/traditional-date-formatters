@@ -1,7 +1,7 @@
 {
   "name": "@traditional-date-formatters/nepali",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
   "description": "Nepali date formatter for traditional-date-formatters"
 }
