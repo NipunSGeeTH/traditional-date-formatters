@@ -1,32 +1,41 @@
 {
   "name": "traditional-date-formatters",
   "version": "1.0.0",
-  "type": "module",
   "description": "Traditional date formatters from cultures around the world",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "example": "ts-node examples/all-formatters.ts"
+    "build": "tsc",
+    "test": "node examples/all-formatters.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "date",
     "formatter",
     "traditional",
+    "sinhala",
+    "nepali",
+    "persian",
+    "ethiopian",
+    "chinese",
     "cultural",
     "international",
     "i18n"
   ],
+  "author": "Nipun Sanjaya",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nipunsgeeth/traditional-date-formatters.git"
+    "url": "https://github.com/NipunSGeeTH/traditional-date-formatters.git"
   },
-  "author": "Your Name",
-  "license": "MIT",
+  "homepage": "https://github.com/NipunSGeeTH/traditional-date-formatters#readme",
   "devDependencies": {
-    "@types/node": "^25.0.6",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  }
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
