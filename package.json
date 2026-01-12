@@ -1,6 +1,6 @@
 {
   "name": "traditional-date-formatters",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Traditional date formatters from cultures around the world",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
