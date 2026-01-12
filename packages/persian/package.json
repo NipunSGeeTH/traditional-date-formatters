@@ -1,0 +1,7 @@
+{
+  "name": "@traditional-date-formatters/persian",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Persian date formatter for traditional-date-formatters"
+}

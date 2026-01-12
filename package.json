@@ -1,0 +1,27 @@
+{
+  "name": "traditional-date-formatters",
+  "version": "1.0.0",
+  "description": "Traditional date formatters from cultures around the world",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Add tests later\"",
+    "example": "node examples/all-formatters.js"
+  },
+  "keywords": [
+    "date",
+    "formatter",
+    "traditional",
+    "cultural",
+    "international",
+    "i18n"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nipunsgeeth/traditional-date-formatters.git"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
