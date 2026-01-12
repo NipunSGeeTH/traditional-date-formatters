@@ -1,6 +1,6 @@
 # Traditional Date Formatters 🌍
 
-A collection of traditional date formatters from cultures around the world. Each culture maintains its own package with traditional calendar systems, month names, and weekday names.
+A collection of traditional date formatters from cultures around the world. Each formatter provides traditional calendar systems, month names, and weekday names in various cultural formats.
 
 ## 🎯 Philosophy
 
@@ -8,39 +8,42 @@ Simple, focused formatters - no complex calculations, just beautiful traditional
 
 ## 📦 Available Formatters
 
-| Culture | Package | Status |
-|---------|---------|--------|
-| 🇱🇰 Sinhala | [@traditional-formatters/sinhala](./packages/sinhala) | ✅ Available |
-| 🇳🇵 Nepali | [@traditional-formatters/nepali](./packages/nepali) | 🚧 Coming soon |
-| 🇮🇷 Persian | [@traditional-formatters/persian](./packages/persian) | 🚧 Coming soon |
-| 🇪🇹 Ethiopian | [@traditional-formatters/ethiopian](./packages/ethiopian) | 🚧 Coming soon |
-| 🇨🇳 Chinese | [@traditional-formatters/chinese](./packages/chinese) | 🚧 Coming soon |
-| 🇮🇱 Hebrew | [@traditional-formatters/hebrew](./packages/hebrew) | 🚧 Coming soon |
-| 🇮🇳 Tamil | [@traditional-formatters/tamil](./packages/tamil) | 🚧 Coming soon |
-| 🇹🇭 Thai | [@traditional-formatters/thai](./packages/thai) | 🚧 Coming soon |
+| Culture | Status |
+|---------|--------|
+| 🇱🇰 Sinhala | ✅ Available |
+| 🇳🇵 Nepali | 🚧 Coming soon |
+| 🇮🇷 Persian | 🚧 Coming soon |
+| 🇪🇹 Ethiopian | 🚧 Coming soon |
+| 🇨🇳 Chinese | 🚧 Coming soon |
 
 ## 🚀 Quick Start
 
-### Sinhala (Sri Lankan)
+### Installation
 ```bash
-npm install @traditional-formatters/sinhala
+npm install traditional-date-formatters
 ```
+
+### Sinhala (Sri Lankan)
 ```javascript
-import { formatSinhala } from '@traditional-formatters/sinhala';
+import { formatSinhala } from 'traditional-date-formatters';
 
 formatSinhala(new Date('2025-01-01'), 'traditional');
 // => 2025 දුරුතු මස 01 වන බදාදා
 ```
 
-### Nepali (Coming Soon)
-```bash
-npm install @traditional-formatters/nepali
-```
+### Available Formats
 ```javascript
-import { formatNepali } from '@traditional-formatters/nepali';
+import { formatSinhala } from 'traditional-date-formatters';
 
-formatNepali(new Date('2025-01-01'), 'traditional');
-// => २०८१ पौष १७ बुधबार
+const date = new Date();
+
+formatSinhala(date, 'short');        // සඳුදා
+formatSinhala(date, 'medium');       // දුරුතු මස සඳුදා
+formatSinhala(date, 'long');         // 2026 දුරුතු මස 12 සඳුදා
+formatSinhala(date, 'traditional');  // 2026 දුරුතු මස 12 වන සඳුදා
+formatSinhala(date, 'gregorian');    // 2026 ජනවාරි 12 සඳුදා
+formatSinhala(date, 'full');         // 2026 ජනවාරි 12 වන සඳුදා (දුරුතු මස)
+formatSinhala(date, 'sinhala-numerals'); // 2026 දුරුතු මස 12 වන සඳුදා (using traditional numerals)
 ```
 
 ## 🤝 Contributing
@@ -50,9 +53,10 @@ We welcome formatters from ALL cultures!
 ### Add Your Culture's Formatter
 
 1. Read [Adding a Formatter Guide](./docs/adding-formatter.md)
-2. Create your package in `packages/your-culture`
+2. Create your implementation in `packages/your-culture`
 3. Follow the same simple structure as Sinhala
-4. Submit a Pull Request
+4. Export your formatter from the main `index.ts`
+5. Submit a Pull Request
 
 ### What We Need
 
